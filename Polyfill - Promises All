@@ -1,5 +1,11 @@
 1. Implement Promise.all polyfill
 
+Promise.all(iterable)
+-  Takes an iterable (usually an array) of promises or values.
+-  Returns one new promise.
+-  Resolves when all input items have resolved → with an array of their values in the same order.
+-  Rejects immediately when any input item rejects → with that rejection reason.
+
 function promiseAll(promises) {
   return new Promise((resolve, reject) => {
     const results = [];
